@@ -1,6 +1,9 @@
 import { prompt, returnMenu } from "./pack.js";
 
 import { userSignUp } from "./functions.js/adicionarUsuário.js";
+import { userList } from "./functions.js/listarUsuários.js";
+import { userUpdate } from "./functions.js/editarUsuário.js";
+import { userRemove } from "./functions.js/removerUsuário.js";
 import { endProcess } from "./pack.js";
 
 export let conta = [];
