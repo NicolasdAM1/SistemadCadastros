@@ -31,6 +31,14 @@ export function userUpdate(){
     const novoNome = prompt("> ");
     console.log(`Email (${usuarioParaEditar.usermail}): `)
     const novoEmail = prompt("> ");
+    const existingUser = conta.find(user => user.usermail === novoEmail);
+    existingUser ? true : false;
+    if(existingUser){
+        console.clear();
+        console.log("O email digitado já pertence a outro usuário.");
+        prompt("Pressione ENTER para continuar...\n> ");
+        userUpdate();
+    }
     
     const novosTelefones = [];
     while (true) {

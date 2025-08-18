@@ -26,6 +26,14 @@ export function userSignUp(){
     
     console.log("Digite o email do usuário: ");
     var usermail = prompt("> ");
+    const existingUser = conta.find(user => user.usermail === usermail);
+    existingUser ? true : false;
+    if(existingUser){
+        console.clear();
+        console.log("O email digitado já pertence a outro usuário.");
+        prompt("Pressione ENTER para continuar...\n> ");
+        userSignUp();
+    }
     const user = {
         ID: Math.floor(Date.now() / 6000),
         username: username,
